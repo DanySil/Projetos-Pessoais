@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Cadastro</title>
+  </head>
+
+  <!-- Chamada da CSS -->
+  <link rel="stylesheet" href="./css/styles.css" />
+  <body>
+    <div class="container flex bg-blue-950">
+      <form
+        name="paginaCadastro"
+        id="paginaCadastro"
+        action=""
+        method="get"
+        class="bg-black"
+      >
+        <h1 class="text-3xl font-semibold text-white">Crie sua conta</h1>
+        <p class="text-lg text-gray-400">
+          Preencha os dados abaixo para continuar.
+        </p>
+        <section>
+          <div>
+            <label for="nome" class="text-lg text-white">Nome completo</label>
+            <input
+              class="text-white border border-gray-400/50 rounded-sm"
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Ex.: Danielly Silva"
+            />
+          </div>
+
+          <div>
+            <!-- ajustar depois para java -->
+            <label for="celular" class="text-lg text-white">Celular</label>
+            <input
+              class="text-white border border-gray-400/50 rounded-sm"
+              type="number"
+              id="celular"
+              placeholder="Ex.: (11) 9898-44001"
+            />
+          </div>
+
+          <div>
+            <label for="email" class="text-lg text-white">E-mail</label>
+            <input
+              class="text-white border border-gray-400/50 rounded-sm"
+              type="email"
+              id="email"
+              placeholder="Ex.: voce@exemplo.com"
+            />
+          </div>
+
+          <div>
+            <label for="senha" class="text-lg text-white">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              class="text-white border border-gray-400/50 rounded-sm"
+            />
+          </div>
+
+          <div>
+            <button
+              class="bg-green-700 hover:bg-blue-900 text-lg text-white font-medium rounded-sm"
+            >
+              Cadastrar
+            </button>
+          </div>
+          <div>
+            <a href="http://" class="text-sm text-white hover:text-gray-400"
+              >Já possui conta? Entrar</a
+            >
+          </div>
+        </section>
+      </form>
+    </div>
+    <!-- Chamada JS -->
+    <script src="./js/theme.js"></script>
+  </body>
+</html>
