@@ -1,1 +1,42 @@
-<p>dashboard-progress works!</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresso</title>
+</head>
+
+<body>
+    <h1>Progresso do enxoval</h1>
+
+    <section>
+        <div class="h-full w-50">
+            <div>
+                <h2>{{Comprados}}%</h2>
+                <h3>COMPRADOS</h3>
+            </div>
+
+            <canvas baseChart [type]="doughnutChartType" [data]="doughnutChartData"
+                [options]="doughnutChartOptions"></canvas>
+
+            <div>
+                <h2 class="text-3xl font-bold">{{naoComprados}}%</h2>
+                <p class="line-clamp-1">NÃO COMPRADOS</p>
+            </div>
+        </div>
+
+        <div>
+            <h2>Total de 500 itens</h2>
+        </div>
+    </section>
+
+    <section>
+        <h2>VALOR GASTO:</h2>
+        <h3>R$ {{formatarParaReal(valorGasto)}}</h3>
+        <h2>VALOR RESTANTE:</h2>
+        <h3>R$ {{formatarParaReal(valorRestante)}}</h3>
+    </section>
+</body>
+
+</html>
