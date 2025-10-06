@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 //Imports gráfico
-import { ChartData, Chart, DoughnutController, ArcElement, Tooltip, Legend, plugins } from 'chart.js';
+import { ChartData, Chart, DoughnutController, ArcElement, Tooltip, Legend, plugins, Title, Colors } from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(DoughnutController, ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -25,6 +25,7 @@ export class DashboardProgress {
         data: [70, 30], //valor ******alterar para valor ser dinamico index 0 é maior, index 1 é menor
         backgroundColor: ['#363636', '#F29F0F'], //cor gráfico
         borderColor: 'transparent', //borda
+        borderAlign: 'inner',
       }
     ]
   }
@@ -40,6 +41,11 @@ export class DashboardProgress {
       datalabels: {
         display: false //desativando datalabels
       },
+    title: {
+      display: true,
+      fontSize: 50,
+      text: "Relatorio de Progresso Enxoval",
+    }
     },
   }
 
@@ -54,5 +60,6 @@ export class DashboardProgress {
 
   public valorGasto: number = 45000; //****ajustar dinamicamente */
   public valorRestante: number = 18000; //**ajustar dinamicamente */
+  public totalItens: number = 800; //**ajustar dinamicamente */
 
 }
