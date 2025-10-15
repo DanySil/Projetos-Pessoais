@@ -23,7 +23,7 @@ export class DashboardProgress {
     datasets: [
       {
         data: [70, 30], //valor ******alterar para valor ser dinamico index 0 é maior, index 1 é menor
-        backgroundColor: ['#363636', '#F29F0F'], //cor gráfico
+        backgroundColor: ['#10B981', '#E5E7EB'], //cor gráfico
         borderColor: 'transparent', //borda
         borderAlign: 'inner',
       }
