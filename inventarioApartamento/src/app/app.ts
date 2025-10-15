@@ -10,7 +10,7 @@ import { ComodosList } from './comodos-list/comodos-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, DashboardProgress, ComodosList, FooterMenu],
+  imports: [RouterOutlet, Header, DashboardProgress, ComodosList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
