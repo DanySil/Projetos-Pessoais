@@ -1,34 +1,64 @@
+<!-- Chamada da font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
 <section
-  class="bg-white rounded-md shadow-md my-5 flex items-center justify-around w-[90%] mx-auto mb-20 pb-2"
+  class="bg-white rounded-md shadow-md my-5 flex items-center justify-between w-[90%] mx-auto mb-20 pb-2 gap-4"
 >
+  <!-- GASTO ETAPA DA OBRA -->
+  <div class="flex w-1/2 pl-10">
+    <table class="w-full">
+      <tbody class="text-gray-600">
+        <tr>
+          <td><i class="fa-regular fa-lightbulb"></i></td>
+          <td>Elétrica e Iluminação</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorEletricaIluminacao) }}</td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-person-shelter"></i></td>
+          <td>Forro de Gesso</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorGesso) }}</td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-ruler-horizontal"></i></td>
+          <td>Piso</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorPiso) }}</td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-paint-roller"></i></td>
+          <td>Pintura</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorPintura) }}</td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-dumpster"></i></td>
+          <td>Marcenaria</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorMarcenaria) }}</td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-compass-drafting"></i></td>
+          <td>Vidros</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorVidros) }}</td>
+        </tr>
+        <tr>
+          <td><i class="fa-solid fa-person-digging"></i></td>
+          <td>Pedreiro</td>
+          <td class="font-medium">R$ {{ formatarParaReal(valorPedreiro) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- GASTO GERAL DA OBRA -->
 
-  <div class="flex flex-col">
+  <div class="flex flex-col w-1/2 items-center">
     <h1 class="text-gray-500 uppercase font-medium text-2xl">Gastos da Obra</h1>
     <h3 class="pt-2 text-3xl font-semibold text-[#10B981]">
       R$ {{ formatarParaReal(valorFinal) }}
     </h3>
-  </div>
-
-  <!-- ETAPA DA OBRA -->
-  <div class="flex flex-col">
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Elétrica e Iluminação:</h2>
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Forro de Gesso:</h2>
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Piso:</h2>
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Pintura:</h2>
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Marcenaria:</h2>
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Vidros:</h2>
-    <h2 class="text-gray-500 uppercase text-sm font-medium pt-2">Pedreiro:</h2>
-  </div>
-
-  <!-- VALORES -->
-  <div class="flex flex-col">
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorEletricaIluminacao) }}</h2>
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorGesso) }}</h2>
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorPiso) }}</h2>
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorPintura) }}</h2>
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorMarcenaria) }}</h2>
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorVidros) }}</h2>
-    <h2 class="text-[#10B981] uppercase text-sm font-medium pt-2">R$ {{ formatarParaReal(valorPedreiro) }}</h2>
   </div>
 </section>
