@@ -1,0 +1,86 @@
+<!-- Chamada da font Awesome -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<section
+  class="bg-white rounded-md shadow-md my-5 flex items-center justify-between w-[90%] mx-auto mb-20 pb-2 gap-4"
+>
+  <!-- GASTO ETAPA DA OBRA -->
+  <div class="pl-2">
+    <div class="flex items-center gap-10 text-gray-600">
+      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
+        <li class="flex items-center gap-1">
+          <i class="fa-regular fa-lightbulb"></i><span>Elétrica e Iluminação</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorEletricaIluminacao) }}
+        </li>
+      </ul>
+
+      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
+        <li class="flex items-center gap-1">
+          <i class="fa-solid fa-person-shelter"></i><span>Forro de Gesso</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorGesso) }}
+        </li>
+      </ul>
+
+      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
+        <li class="flex items-center gap-1">
+          <i class="fa-solid fa-ruler-horizontal"></i><span>Piso</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorPiso) }}
+        </li>
+      </ul>
+
+      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
+        <li class="flex items-center gap-1">
+          <i class="fa-solid fa-paint-roller"></i><span>Pintura</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorPintura) }}
+        </li>
+      </ul>
+
+      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
+        <li class="flex items-center gap-1">
+          <i class="fa-solid fa-dumpster"></i><span>Marcenaria</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorMarcenaria) }}
+        </li>
+      </ul>
+
+      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
+        <li class="flex items-center gap-1">
+          <i class="fa-solid fa-compass-drafting"></i><span>Vidros</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorVidros) }}
+        </li>
+      </ul>
+
+      <ul class="flex flex-col justify-center items-start gap-1">
+        <li class="flex items-center gap-1">
+          <i class="fa-solid fa-person-digging"></i><span>Pedreiro</span>
+        </li>
+        <li class="font-bold text-gray-700 text-center w-full">
+          R$ {{ formatarParaReal(valorPedreiro) }}
+        </li>
+      </ul>
+
+      <!-- GASTO GERAL DA OBRA -->
+      <div class="flex flex-col items-center">
+        <h2 class="text-gray-500 uppercase font-medium text-xl">Gastos da Obra</h2>
+        <h3 class="text-2xl font-semibold text-[#10B981]">R$ {{ formatarParaReal(valorFinal) }}</h3>
+      </div>
+    </div>
+  </div>
+</section>
