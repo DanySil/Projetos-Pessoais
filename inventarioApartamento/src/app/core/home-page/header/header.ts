@@ -8,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class Header {
 
+public clickNotification(): void {
+  console.log("Clicou na notificação");
+}
+
+public clickIcon(): void {
+  console.log("Clicou no Avatar");
+}
 }

@@ -1,85 +1,141 @@
-<!-- Chamada da font Awesome -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-  integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"
-/>
+<section class="w-[90%] mx-auto my-6">
+  <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
+    <!-- Cabeçalho -->
+    <div class="flex items-center justify-between mb-5">
+      <h2 class="text-xl font-semibold text-slate-900">Gastos da Obra</h2>
 
-<section
-  class="bg-white rounded-md shadow-md my-5 flex items-center justify-between w-[90%] mx-auto mb-20 pb-2 gap-4"
->
-  <!-- GASTO ETAPA DA OBRA -->
-  <div class="pl-2">
-    <div class="flex items-center gap-10 text-gray-600">
-      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
-        <li class="flex items-center gap-1">
-          <i class="fa-regular fa-lightbulb"></i><span>Elétrica e Iluminação</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
+      <!-- Total -->
+      <div class="text-right">
+        <p class="text-slate-500 text-lg">Total</p>
+        <p class="text-2xl font-bold text-emerald-600">R$ {{ formatarParaReal(valorFinal) }}</p>
+      </div>
+    </div>
+
+    <!-- Grid de categorias -->
+    <div class="grid grid-cols-4 gap-4">
+      <!-- Elétrica -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-50 flex items-center justify-center">
+            <i class="fa-regular fa-lightbulb text-emerald-600"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Elétrica e Iluminação</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">
           R$ {{ formatarParaReal(valorEletricaIluminacao) }}
-        </li>
-      </ul>
+        </p>
+      </div>
 
-      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
-        <li class="flex items-center gap-1">
-          <i class="fa-solid fa-person-shelter"></i><span>Forro de Gesso</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
-          R$ {{ formatarParaReal(valorGesso) }}
-        </li>
-      </ul>
+      <!-- Gesso -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-slate-50 flex items-center justify-center">
+            <i class="fa-solid fa-person-shelter text-slate-700"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Forro de Gesso</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">R$ {{ formatarParaReal(valorGesso) }}</p>
+      </div>
 
-      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
-        <li class="flex items-center gap-1">
-          <i class="fa-solid fa-ruler-horizontal"></i><span>Piso</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
-          R$ {{ formatarParaReal(valorPiso) }}
-        </li>
-      </ul>
+      <!-- Piso -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-slate-50 flex items-center justify-center">
+            <i class="fa-solid fa-ruler-horizontal text-slate-700"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Piso</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">R$ {{ formatarParaReal(valorPiso) }}</p>
+      </div>
 
-      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
-        <li class="flex items-center gap-1">
-          <i class="fa-solid fa-paint-roller"></i><span>Pintura</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
-          R$ {{ formatarParaReal(valorPintura) }}
-        </li>
-      </ul>
+      <!-- Pintura -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-50 flex items-center justify-center">
+            <i class="fa-solid fa-paint-roller text-emerald-600"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Pintura</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">R$ {{ formatarParaReal(valorPintura) }}</p>
+      </div>
 
-      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
-        <li class="flex items-center gap-1">
-          <i class="fa-solid fa-dumpster"></i><span>Marcenaria</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
+      <!-- Marcenaria -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-slate-50 flex items-center justify-center">
+            <i class="fa-solid fa-dumpster text-slate-700"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Marcenaria</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">
           R$ {{ formatarParaReal(valorMarcenaria) }}
-        </li>
-      </ul>
+        </p>
+      </div>
 
-      <ul class="flex flex-col justify-center items-start gap-1 min-w-max">
-        <li class="flex items-center gap-1">
-          <i class="fa-solid fa-compass-drafting"></i><span>Vidros</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
-          R$ {{ formatarParaReal(valorVidros) }}
-        </li>
-      </ul>
+      <!-- Vidros -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-slate-50 flex items-center justify-center">
+            <i class="fa-solid fa-compass-drafting text-slate-700"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Vidros</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">R$ {{ formatarParaReal(valorVidros) }}</p>
+      </div>
 
-      <ul class="flex flex-col justify-center items-start gap-1">
-        <li class="flex items-center gap-1">
-          <i class="fa-solid fa-person-digging"></i><span>Pedreiro</span>
-        </li>
-        <li class="font-bold text-gray-700 text-center w-full">
+      <!-- Pedreiro -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-200"
+      >
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-slate-50 flex items-center justify-center">
+            <i class="fa-solid fa-person-digging text-slate-700"></i>
+          </div>
+          <div>
+            <p class="text-slate-700 font-semibold">Pedreiro</p>
+            <p class="text-slate-400 text-sm mt-0.5">Categoria</p>
+          </div>
+        </div>
+        <p class="mt-3 text-lg font-bold text-slate-900">
           R$ {{ formatarParaReal(valorPedreiro) }}
-        </li>
-      </ul>
+        </p>
+      </div>
 
-      <!-- GASTO GERAL DA OBRA -->
-      <div class="flex flex-col items-center">
-        <h2 class="text-gray-500 uppercase font-medium text-xl">Gastos da Obra</h2>
-        <h3 class="text-2xl font-semibold text-[#10B981]">R$ {{ formatarParaReal(valorFinal) }}</h3>
+      <!--  Card extra pra manter grid alinhado -->
+      <div
+        class="rounded-2xl border border-slate-200 bg-slate-50 p-4 flex items-center justify-center text-slate-400 hover:bg-slate-100"
+      >
+        <span class="text-sm">+</span>
       </div>
     </div>
   </div>

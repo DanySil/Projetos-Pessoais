@@ -1,16 +1,42 @@
-    <!-- Chamada da font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <nav class="bg-white w-full h-10 text-white flex justify-between items-center text-2xl p-4">
-        <div class="flex items-center space-x-2 text-[#1F2937]">
-            <i class="fa-regular fa-house text-[#10B981]"></i>
-            <h1 class="font-bold">Home+</h1>
+<header class="bg-white border-b border-slate-200">
+  <nav class="h-16 w-full">
+    <div class="mx-auto max-w-6xl h-full px-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-emerald-50 flex items-center justify-center">
+          <i class="fa-solid fa-house text-emerald-600 text-lg"></i>
         </div>
+        <h1 class="font-extrabold text-xl tracking-tight">
+          Home<span class="text-emerald-600">+</span>
+        </h1>
+      </div>
 
-        <div class="flex items-center space-x-4 text-[#1F2937]">
-            <i class="fa-regular fa-user"></i>
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    </nav>
+      <!-- Nofiticação -->
+      <div class="flex items-center gap-3">
+        <button
+          class="w-10 h-10 rounded-xl hover:bg-slate-50 text-slate-600 flex items-center justify-center"
+          aria-label="Notificações"
+          (click)="clickNotification()"
+        >
+          <i class="fa-regular fa-bell text-lg"></i>
+        </button>
+
+        <!-- Avatar (ícone do boneco) -->
+        <button
+          class="w-10 h-10 rounded-full bg-slate-100 text-slate-700 flex items-center justify-center ring-1 ring-slate-200"
+          aria-label="Perfil"
+          (click)="clickIcon()"
+        >
+          <i class="fa-solid fa-user text-sm"></i>
+        </button>
+
+        <!-- Hamgurger Mobile -->
+        <!-- <button
+          class="md:hidden w-10 h-10 rounded-xl hover:bg-slate-50 text-slate-600 flex items-center justify-center"
+          aria-label="Menu"
+        >
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button> -->
+      </div>
+    </div>
+  </nav>
+</header>

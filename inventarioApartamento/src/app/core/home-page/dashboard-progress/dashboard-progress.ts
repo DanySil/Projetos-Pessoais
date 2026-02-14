@@ -1,7 +1,17 @@
 import { Component } from '@angular/core';
 
 //Imports gráfico
-import { ChartData, Chart, DoughnutController, ArcElement, Tooltip, Legend, plugins, Title, Colors } from 'chart.js';
+import {
+  ChartData,
+  Chart,
+  DoughnutController,
+  ArcElement,
+  Tooltip,
+  Legend,
+  plugins,
+  Title,
+  Colors,
+} from 'chart.js';
 import { BaseChartDirective } from 'ng2-charts';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(DoughnutController, ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -11,55 +21,55 @@ Chart.register(DoughnutController, ArcElement, Tooltip, Legend, ChartDataLabels)
   standalone: true,
   imports: [BaseChartDirective],
   templateUrl: './dashboard-progress.html',
-  styleUrl: './dashboard-progress.css'
+  styleUrl: './dashboard-progress.css',
 })
 export class DashboardProgress {
   //Definindo tipo de gráfico
   public doughnutChartType: any = 'doughnut';
+
+  //variaveis
+
+  public naoComprados: number = 30; //****ajustar dinamicamente */
+  public Comprados: number = 70; //****ajustar dinamicamente */
+
+  public valorGasto: number = 45000; //****ajustar dinamicamente */
+  public valorRestante: number = 18000; //**ajustar dinamicamente */
 
   //Dados do gráfico
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: ['Comprados', 'Não Comprados'],
     datasets: [
       {
-        data: [70, 30], //valor ******alterar para valor ser dinamico index 0 é maior, index 1 é menor
+        data: [this.Comprados, this.naoComprados], //valores grafico
         backgroundColor: ['#10B981', '#E5E7EB'], //cor gráfico
         borderColor: 'transparent', //borda
-        borderAlign: 'inner',
-      }
-    ]
-  }
+        spacing: 2, //  dá uma separação sutil entre os arcos
+      },
+    ],
+  };
 
   //Opções do gráfico
   public doughnutChartOptions: any = {
     responsive: true, //responsividade
-    cutout: '85%', //espessura do gráfico
+    maintainAspectRatio: false, // (5) deixa você controlar pelo CSS (w/h)
+    cutout: '82%', //espessura do gráfico
+    rotation: -90, // começa do topo
+    animation: { duration: 900 }, //animação do arco
     plugins: {
       legend: {
         display: false, //desativando legenda
       },
       datalabels: {
-        display: false //desativando datalabels
+        display: false, //desativando datalabels
       },
-    title: {
-      display: true,
-      fontSize: 50,
-      text: "Relatorio de Progresso Enxoval",
-    }
+      title: {
+        display: false, //desativando titulo grafico
+      },
     },
-  }
-
-  //variaveis
-  public naoComprados: number = this.doughnutChartData.datasets[0].data[1]
-  public Comprados: number = this.doughnutChartData.datasets[0].data[0]
+  };
 
   // Um método para formatar o número
   formatarParaReal(valor: number): string {
     return valor.toLocaleString('pt-BR');
   }
-
-  public valorGasto: number = 45000; //****ajustar dinamicamente */
-  public valorRestante: number = 18000; //**ajustar dinamicamente */
-  public totalItens: number = 800; //**ajustar dinamicamente */
-
 }
