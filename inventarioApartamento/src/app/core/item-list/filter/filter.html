@@ -1,1 +1,82 @@
+<section class="my-6 w-[90%] mx-auto">
+  <h2 class="text-xl font-semibold text-slate-900 mb-2">Enxoval</h2>
+  <p class="text-slate-500 text-md mb-2">
+    Organize por cômodos e acompanhe compras, prioridades e gastos.
+  </p>
 
+  <main>
+    <!-- filtros -->
+    <section class="space-y-5">
+      <!-- busca -->
+      <div
+        class="rounded-2xl bg-slate-100 text-gray-500 focus:outline-none border border-slate-200 shadow px-2 space-x-2 text-md"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Busca item (ex: sofá, tapete...)" />
+      </div>
+      <!-- filtros extendido -->
+      <div class="">
+        <!-- filtro por cômodos -->
+        <div class="v-show">
+          <button class="border border-slate-200 rounded-5xl bg-slate-100 text-md shadow px-8">Cômodos<i class="fa-solid fa-chevron-down ml-1"></i></button>
+          <div class="border border-slate-200 rounded-5xl text-md shadow px-2">
+            <ul class="w-full text-sm text-gray-500 px-1 bg-white hover:bg-gray-100">
+            <li>Sala</li>
+            <li>Quarto</li>
+            <li>Cozinha</li>
+            <li>Banheiro</li>
+          </ul>
+
+          </div>
+          </div>
+        </div>
+        <!-- filtro por status -->
+        <div></div>
+        <!-- filtro por prioridade -->
+        <div></div>
+      <!-- botão do filtro -->
+      <div>
+        <button class=" rounded-2xl bg-gray-700 hover:bg-gray-500 px-9 py-2 text-white">
+          Buscar
+        </button>
+      </div>
+    </section>
+
+    <!-- resumo de gastos -->
+    <section class="">
+      <!-- Gasto -->
+      <div class="w-64 bg-white rounded-2xl border border-slate-200 shadow p-4 my-6">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-50 flex items-center justify-center">
+            <i class="fa-solid fa-bag-shopping text-emerald-600"></i>
+          </div>
+
+          <div>
+            <p class="text-slate-400 text-sm mt-1">Total gasto</p>
+            <p class="text-slate-500 text-sm">
+              R$
+              <span class="font-bold text-emerald-600 text-xl">50.000</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restante -->
+      <div class="w-64 bg-white rounded-2xl border border-slate-200 shadow p-4">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-orange-50 flex items-center justify-center">
+            <i class="fa-solid fa-cart-shopping text-orange-500"></i>
+          </div>
+
+          <div>
+            <p class="text-slate-400 text-sm mt-1">Falta comprar</p>
+            <p class="text-slate-500 text-sm">
+              R$
+              <span class="font-bold text-orange-500 text-xl">50.000</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</section>

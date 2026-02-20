@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class Filter {
 
+  public name:string = "Cômodos"
+
+  // public clickDropdown(): boolean {
+  //   return {
+  //  isOpen: false
+
+  //   };
+  // }
+
 }

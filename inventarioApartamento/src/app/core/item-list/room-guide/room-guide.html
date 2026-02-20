@@ -1,0 +1,155 @@
+<section class="max-w-6xl mx-auto px-6 my-6">
+  <!-- Cabeçalho do cômodo -->
+  <div class="flex items-start justify-between mb-4">
+    <div class="flex gap-6 items-center">
+      <h2 class="text-xl font-semibold text-slate-900">Cozinha</h2>
+      <span>•</span>
+      <p class="text-slate-500 text-sm mt-1">Itens do cômodo <span class="mx-2">•</span>3 itens</p>
+    </div>
+
+    <!--botao adicionar itens-->
+    <button
+      class="bg-white border border-slate-200 rounded-xl px-4 py-2 text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+      aria-label="Adicionar item"
+    >
+      <p class="text-md"><span class="text-2xl">+</span> Adicionar item</p>
+    </button>
+  </div>
+
+  <!--Grid do cards-->
+  <main class="grid grid-cols-3 gap-6">
+    <!-- Card item COMPRADOS-->
+    <section
+      class="bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden"
+    >
+      <div class="relative h-44">
+        <!--lixeira-->
+
+        <button
+          class="absolute top-3 right-3 w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200 shadow-sm cursor-pointer"
+          aria-label="Remover item"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+
+        <img
+          class="h-full w-full object-contain p-4"
+          src="../../assets/images/airfryer.jpg"
+          alt="Sala"
+        />
+      </div>
+
+      <div class="p-4">
+        <!--Nome + preço-->
+        <h3 class="text-slate-900 font-semibold text-lg leading-snug">Fritadeira Airfryer</h3>
+        <p class="mt-1 text-emerald-600 font-bold text-xl">R$ 369,71</p>
+
+        <!--tags-->
+        <div class="flex flex-wrap mt-3 gap-2">
+          <p
+            class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-white bg-emerald-500 rounded-full text-sm font-semibold"
+          >
+            <i class="fa-solid fa-check"></i>Comprado
+          </p>
+
+          <p
+            class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-amber-600 bg-yellow-100 rounded-full text-sm font-semibold"
+          >
+            <i class="fa-regular fa-bookmark"></i> Prioridade: Alta
+          </p>
+        </div>
+
+        <!--quantidade e valores -->
+        <div class="flex mt-3 text-sm text-slate-600">
+          <p>1 unidade <span class="mx-2">•</span>R$ 369,71</p>
+        </div>
+
+        <!--linha-->
+        <div class="mt-4 h-px w-full bg-slate-100"></div>
+
+        <!--Link-->
+        <button
+          class="mt-3 w-full flex items-center justify-between text-slate-600 hover:text-slate-900 transition"
+        >
+          <div class="flex items-center gap-2 text-sm font-medium">
+            <span
+              class="w-8 h-8 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-link text-slate-500"></i>
+            </span>
+            Ver link do produto
+          </div>
+
+          <i class="fa-solid fa-chevron-right text-slate-400"></i>
+        </button>
+      </div>
+    </section>
+
+    <!--Card itens NÃO COMPRADOS-->
+    <section
+      class="bg-white border border-slate-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 overflow-hidden"
+    >
+      <div class="relative h-44">
+        <!--lixeira-->
+
+        <button
+          class="absolute top-3 right-3 w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-600 border border-slate-200 shadow-sm cursor-pointer"
+          aria-label="Remover item"
+        >
+          <i class="fa-regular fa-trash-can"></i>
+        </button>
+
+        <img
+          class="h-full w-full object-contain p-4"
+          src="../../assets/images/airfryer.jpg"
+          alt="Sala"
+        />
+      </div>
+
+      <div class="p-4">
+        <!--Nome + preço-->
+        <h3 class="text-slate-900 font-semibold text-lg leading-snug">Fritadeira Airfryer</h3>
+        <p class="mt-1 text-emerald-600 font-bold text-xl">R$ 369,71</p>
+
+        <!--tags-->
+        <div class="flex flex-wrap mt-3 gap-2">
+          <p
+            class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-white bg-orange-400 rounded-full text-sm font-semibold"
+          >
+            <i class="fa-solid fa-cart-shopping"></i>Não comprado
+          </p>
+
+          <p
+            class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-amber-600 bg-yellow-100 rounded-full text-sm font-semibold"
+          >
+            <i class="fa-regular fa-bookmark"></i> Prioridade: Alta
+          </p>
+        </div>
+
+        <!--quantidade e valores -->
+        <div class="flex mt-3 text-sm text-slate-600">
+          <p>1 unidade <span class="mx-2">•</span>R$ 369,71</p>
+        </div>
+
+        <!--linha-->
+        <div class="mt-4 h-px w-full bg-slate-100"></div>
+
+        <!--Link-->
+        <button
+          class="mt-3 w-full flex items-center justify-between text-slate-600 hover:text-slate-900 transition"
+        >
+          <div class="flex items-center gap-2 text-sm font-medium">
+            <span
+              class="w-8 h-8 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center"
+            >
+              <i class="fa-solid fa-link text-slate-500"></i>
+            </span>
+            Ver link do produto
+          </div>
+
+          <i class="fa-solid fa-chevron-right text-slate-400"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+</section>

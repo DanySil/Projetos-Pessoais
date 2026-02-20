@@ -5,7 +5,7 @@ import { ItemList } from "./core/item-list/item-list";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ItemList],
+  imports: [RouterOutlet, Home, ItemList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
