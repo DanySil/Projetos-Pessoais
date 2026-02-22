@@ -1,0 +1,68 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Cozinha",
+      "items": [
+        {
+          "id": 1,
+          "image": "../../assets/images/airfryer.jpg",
+          "nameItem": "Fritadeira Airfryer",
+          "price": 369.71,
+          "purchased": "Comprado",
+          "priority": "Alta",
+          "quantity": 1,
+          "link": "https://www.amazon.com.br/Walita-Fritadeira-capacidade-internacional-RI9270/dp/B0BRL93TYM?th=1"
+        },
+        {
+          "id": 2,
+          "image": "../../assets/images/depurador.webp",
+          "nameItem": "Depurador",
+          "price": 699.00,
+          "purchased": "Não comprado",
+          "priority": "Média",
+          "quantity": 1,
+          "link": "https://www.philco.com.br/depurador-pdr65i-retratil-127v-059011014/p?idsku=21956&gad_source=4&gclid=Cj0KCQjwy46_BhDOARIsAIvmcwO-iqavOH2y4bTN9Tk6Byixq-GbScIN_X2ciIOzaMPn9gM9kDBxWW4aAsSmEALw_wcB"
+        },
+                {
+          "id": 2,
+          "image": "../../assets/images/tijelasopa.webp",
+          "nameItem": "Tijela de Sopa",
+          "price": 97.90,
+          "purchased": "Não comprado",
+          "priority": "Baixa",
+          "quantity": 2,
+          "link": "https://shopee.com.br/product/1075271269/23793415044?d_id=4c355&uls_trackid=550adn2800r0&utm_content=3dho5jXHErFN8jfdaWKe2p8i2C5u"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sala",
+      "items": [
+        {
+          "id": 1,
+          "image": "../../assets/images/maçaneta.webp",
+          "nameItem": "Fechadura Eletrônica",
+          "price": 375.00,
+          "purchased": "Comprado",
+          "priority": "Alta",
+          "quantity": 1,
+          "link": "https://www.mercadolivre.com.br/fechadura-eletrnica-inteligente-wifi-novadigital-shine-biometria-digital-app-senha-carto-magnetico-touch-automaco-tuya-smart-life-preta/p/MLB61168451?pdp_filters=item_id%3AMLB5858666048#origin=share&sid=share&wid=MLB5858666048&action=copy"
+        },
+        {
+          "id": 2,
+          "image": "../../assets/images/sofa.jpg",
+          "nameItem": "Sofá Retrátil",
+          "price": 2.800,
+          "purchased": "Não comprado",
+          "priority": "Baixa",
+          "quantity": 1,
+          "link": "https://www.mobly.com.br/sofa-2-lugares-retratil-e-reclinavel-malta-linho-cru-160-cm-1171015.html?spall_source=especiais&custom_campaign=shop_pmax_1p_sofas&custom_source=google&custom_medium=cpc&gad_source=4&gclid=Cj0KCQjwqIm_BhDnARIsAKBYcmvI8KrNPzS_wnJv8OUWLKDsSXNFodDPOdOkd8IXhyvtlNXwutqaSbAaAhgkEALw_wcB"
+        }
+      ]
+    }
+  ]
+}
+
+

@@ -69,7 +69,10 @@ export class DashboardProgress {
   };
 
   // Um método para formatar o número
-  formatarParaReal(valor: number): string {
-    return valor.toLocaleString('pt-BR');
+  public formatarParaReal(valor: number): string {
+    return valor.toLocaleString('pt-BR', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  });
   }
 }
