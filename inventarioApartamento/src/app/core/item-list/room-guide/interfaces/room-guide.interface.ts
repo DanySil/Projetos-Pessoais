@@ -1,10 +1,10 @@
-export interface Room {
+export interface IRoom {
   id: number;
   name: string;
-  items: ItemsDetails[]; //array []
+  items: IItemsDetails[]; //array []
 }
 
-export interface ItemsDetails {
+export interface IItemsDetails {
   id: number;
   image: string;
   nameItem: string;

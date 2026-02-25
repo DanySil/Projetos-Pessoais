@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 //imports novos
-import { Room } from '../interfaces/room-guide.interface';
+import { IRoom } from '../interfaces/room-guide.interface';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,10 +10,10 @@ import { Observable } from 'rxjs';
 })
 export class RoomGuideService {
 
-  constructor(private httpClient: HttpClient) {} //httpclient só pq estou chamando o back? sempre vai ser isso?
+  constructor(private httpClient: HttpClient) {} //Chamada para o back, ele fará o metodo http
 
-  public getData(): Observable<Room[]> { //observable pq?
+  public getData(): Observable<IRoom[]> { //Ele é observado
     const url = 'http://localhost:3000/rooms'
-    return this.httpClient.get<Room[]>(url) //não entendi o que está fazendo aqui?
+    return this.httpClient.get<IRoom[]>(url)
   }
-} //o que essa função faz?
+}

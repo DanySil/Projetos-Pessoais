@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core'; //Chamando o OnInit
 
 //Imports novos
-import { ItemsDetails, Room } from './interfaces/room-guide.interface'; //Chamada interface back
+import { IItemsDetails, IRoom } from './interfaces/room-guide.interface'; //Chamada interface back
 import { RoomGuideService } from './services/room-guide'; //Chamando o service
 
 
@@ -13,23 +13,23 @@ import { RoomGuideService } from './services/room-guide'; //Chamando o service
 })
 export class RoomGuideComponent implements OnInit {
 
-public itemsRoom: Room[] = [];
-public itemData: ItemsDetails[] = [];
+public itemsRoom: IRoom[] = [];
+public itemData: IItemsDetails[] = [];
 
-constructor(private roomGuide: RoomGuideService) {} //pq no contructor? pq se não a página vem primeiro que os dados?
+constructor(private roomGuideService: RoomGuideService) {} //Precisamos chamar as ferramentas para funcionar antes de iniciar o component.
 
 ngOnInit(): void {
-this.getDataRoomGuideService() //pq aqui?
+this.getDataRoomGuideService() //Inicia o component
 }
 
 private getDataRoomGuideService(): void {
-this.roomGuide.getData().subscribe({ //O que é o subscribe? eu sei que ele recebe next que é sucesso e error que é erro
-  next: (response: Room[]) => { //response estou dando qualquer nome ou é um nome exato??? o que estou fazendo aqui?
-    this.itemsRoom = response //o que faço aqui?
-    this.itemData = response[0]?.items ?? []; //char??
+this.roomGuideService.getData().subscribe({ //Subscribe - Observa o Observable que foi chamado no service
+  next: (response: IRoom[]) => { //response é um parametro (poderia ser qualquer nome), o Room[] é a tipagem que está recebendo o tipo do que vem do back
+    this.itemsRoom = response //Atribuindo o valor dos dados que estão vindo para o back dentro da variavel que criei
+    this.itemData = response[0]?.items ?? [];
   },
   error: err => {
-    console.log('err', err) //que erro vai dar aqui? isso tudo é um padrão de escrita?
+    console.log('err', err)
   }
   }
 )
