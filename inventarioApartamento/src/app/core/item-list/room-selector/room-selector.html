@@ -1,0 +1,58 @@
+<!-- room-tabs.component.html -->
+<section class="mx-auto max-w-6xl px-6 mt-6">
+  <!-- Container -->
+  <div class="bg-white border border-slate-200 rounded-2xl shadow-sm px-3 py-2">
+    <nav class="flex items-center gap-2">
+      <!-- Aba ativa -->
+      <button
+        class="px-4 py-2 rounded-xl bg-emerald-50 text-emerald-700 font-semibold relative cursor-pointer"
+        type="button"
+      >
+        Sala
+        <!-- “underline” da aba ativa -->
+        <span class="absolute left-4 right-4 -bottom-1 h-0.5 bg-emerald-600 rounded-full"></span>
+      </button>
+
+      <!-- Abas inativas -->
+      <button
+        class="px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+        type="button"
+      >
+        Cozinha
+      </button>
+
+      <button
+        class="px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+        type="button"
+      >
+        Banheiro
+      </button>
+
+      <button
+        class="px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+        type="button"
+      >
+        Quarto
+      </button>
+
+      <button
+        class="px-4 py-2 rounded-xl text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+        type="button"
+      >
+        Home Office
+      </button>
+
+      <!-- Separador -->
+      <div class="h-6 w-px bg-slate-200 mx-1"></div>
+
+      <!-- Botão “Novo cômodo” -->
+      <button
+        class="px-4 py-2 rounded-xl text-slate-600 hover:bg-slate-50 transition flex items-center gap-2 cursor-pointer"
+        type="button"
+      >
+        <i class="fa-solid fa-plus text-slate-500"></i>
+        <span>Novo cômodo</span>
+      </button>
+    </nav>
+  </div>
+</section>

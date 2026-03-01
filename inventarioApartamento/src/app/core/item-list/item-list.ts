@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
 import { FooterMenu } from "../../shared/footer-menu/footer-menu";
 import { Filter } from "./filter/filter";
 import { RoomGuideComponent } from "./room-guide/room-guide";
-import { ItensCards } from "./itens-cards/itens-cards";
+import { RoomSelector } from './room-selector/room-selector';
 
 
 @Component({
   selector: 'app-item-list',
-  imports: [FooterMenu, RoomGuideComponent, ItensCards],
+  imports: [FooterMenu, RoomGuideComponent, Filter, RoomSelector],
   templateUrl: './item-list.html',
   styleUrl: './item-list.css'
 })
