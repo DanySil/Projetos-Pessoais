@@ -1,12 +1,13 @@
-<footer class=" bottom-0 inset-x-0 z-50 bg-white border-t border-slate-200 shadow-[0_-10px_25px_rgba(0,0,0,0.06)]">
+<footer
+  class="bottom-0 inset-x-0 z-50 bg-white border-t border-slate-200 shadow-[0_-10px_25px_rgba(0,0,0,0.06)]"
+>
   <div class="mx-auto max-w-6xl px-6">
     <nav class="h-16 flex items-center justify-between">
-
-      <!-- Início (ativo fixo por enquanto) -->
+      <!-- Início -->
       <button
         class="flex items-center gap-3 px-4 py-2 rounded-xl bg-emerald-50 text-slate-900 font-semibold cursor-pointer"
         routerLink="home-page"
-        (click)="clickStart()"
+        (click)="navigateTo('home')"
       >
         <i class="fa-solid fa-house text-emerald-600"></i>
         <span class="text-sm">Início</span>
@@ -16,7 +17,7 @@
       <button
         class="flex items-center gap-3 px-4 py-2 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition cursor-pointer"
         routerLink="journal-page"
-        (click)="clickWork()"
+        (click)="navigateTo('diario-obra')"
       >
         <i class="fa-solid fa-helmet-safety text-emerald-600"></i>
         <span class="text-sm">Diário de Obra</span>
@@ -26,7 +27,7 @@
       <button
         class="flex items-center gap-3 px-4 py-2 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition cursor-pointer"
         routerLink="item-list"
-        (click)="clickShopping()"
+        (click)="navigateTo('enxoval')"
       >
         <i class="fa-regular fa-star text-emerald-600"></i>
         <span class="text-sm">Enxoval</span>
@@ -36,12 +37,11 @@
       <button
         class="flex items-center gap-3 px-4 py-2 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition cursor-pointer"
         routerLink="compare-page"
-        (click)="clickPrice()"
+        (click)="navigateTo('comparativos')"
       >
         <i class="fa-solid fa-hand-holding-dollar text-emerald-600"></i>
         <span class="text-sm">Comparativo</span>
       </button>
-
     </nav>
   </div>
 </footer>

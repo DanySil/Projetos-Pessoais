@@ -1,31 +1,29 @@
 import { Routes } from '@angular/router';
-
-//Rotas dos componentes
-import { Home } from './core/home-page/home-page';
+import { RoutesEnum } from './shared/enum/routes.enum';
 import { ItemList } from './core/item-list/item-list';
-import { JournalPage } from './core/journal-page/journal-page';
+import { Home } from './core/home-page/home-page';
 import { ComparePage } from './core/compare-page/compare-page';
-import { FooterMenu } from './shared/footer-menu/footer-menu';
+import { JournalPage } from './core/journal-page/journal-page';
 
 export const routes: Routes = [
   {
-    path: 'home-page',
+    path: '',
     component: Home
   },
   {
-    path: 'item-list',
-    component: ItemList
+    path: RoutesEnum.HOME_PAGE,
+    component: Home,
   },
   {
-    path: 'journal-page',
+    path: RoutesEnum.ITEM_LIST,
+    component: ItemList,
+  },
+  {
+    path: RoutesEnum.COMPARE_PAGE,
+    component: ComparePage,
+  },
+  {
+    path: RoutesEnum.JOURNAL_PAGE,
     component: JournalPage
-  },
-  {
-    path: 'compare-page',
-    component: ComparePage
-  },
-  {
-    path: 'footer',
-    component: FooterMenu
   }
 ];
