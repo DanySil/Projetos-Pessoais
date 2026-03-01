@@ -5,15 +5,20 @@
       <h2 class="text-xl font-semibold text-slate-900">Cozinha</h2>
 
       <span>•</span>
-      <p class="text-slate-500 text-sm mt-1">Itens do cômodo <span class="mx-2">•</span>3 itens</p>
+      <p class="text-slate-500 text-sm mt-1">
+        Itens do cômodo <span class="mx-2">•</span>{{ itemsRoom[0].items.length }} itens
+      </p>
     </div>
 
     <!--botao adicionar itens-->
     <button
       class="bg-white border border-slate-200 rounded-xl px-4 py-1 text-slate-700 hover:bg-slate-50 transition cursor-pointer"
       aria-label="Adicionar item"
+      (click)="openAddItemModal()"
     >
-      <p class="text-md"><span class="text-xl">+</span> Adicionar item</p>
+      <p class="text-md" >
+        <span class="text-xl">+</span> Adicionar item
+      </p>
     </button>
   </div>
 
@@ -39,23 +44,25 @@
         <div class="p-4">
           <!--Nome + preço-->
           <h3 class="text-slate-900 font-semibold text-lg leading-snug">{{ item.nameItem }}</h3>
-          <p class="mt-1 text-emerald-600 font-bold text-xl">R$  {{ formatarParaReal(item.price) }}</p>
+          <p class="mt-1 text-emerald-600 font-bold text-xl">
+            R$ {{ formatarParaReal(item.price) }}
+          </p>
 
           <!--tags-->
           <div class="flex flex-wrap mt-3 gap-2">
             <!-- COMPRADO-->
-            @if (item.purchased === "Comprado") {
+            @if (item.purchased === 'Comprado') {
               <p
                 class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-white bg-emerald-500 rounded-full text-sm font-semibold"
               >
-                <i class="fa-solid fa-check"></i>{{item.purchased}}
+                <i class="fa-solid fa-check"></i>{{ item.purchased }}
               </p>
               <!--NÃO COMPRADO-->
             } @else {
               <p
                 class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-white bg-orange-400 rounded-full text-sm font-semibold"
               >
-                <i class="fa-solid fa-cart-shopping"></i>{{item.purchased}}
+                <i class="fa-solid fa-cart-shopping"></i>{{ item.purchased }}
               </p>
             }
 
@@ -64,20 +71,19 @@
               <p
                 class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-red-600 bg-red-100 rounded-full text-sm font-semibold"
               >
-                <i class="fa-regular fa-bookmark"></i> Prioridade: {{item.priority}}
+                <i class="fa-regular fa-bookmark"></i> Prioridade: {{ item.priority }}
               </p>
             } @else if (item.priority === 'Média') {
               <p
                 class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-amber-600 bg-yellow-100 rounded-full text-sm font-semibold"
               >
-                <i class="fa-regular fa-bookmark"></i> Prioridade: {{item.priority}}
+                <i class="fa-regular fa-bookmark"></i> Prioridade: {{ item.priority }}
               </p>
-            }
-            @else {
+            } @else {
               <p
                 class="inline-flex items-center gap-2 px-3 py-1 mt-1 text-green-600 bg-green-100 rounded-full text-sm font-semibold"
               >
-                <i class="fa-regular fa-bookmark"></i> Prioridade: {{item.priority}}
+                <i class="fa-regular fa-bookmark"></i> Prioridade: {{ item.priority }}
               </p>
             }
           </div>
@@ -85,10 +91,9 @@
           <!--quantidade e valores -->
           <div class="flex mt-3 text-sm text-slate-600">
             <p>
-              {{ item.quantity }} {{ item.quantity === 1 ? 'unidade' : 'unidades' }}
-              <span class="mx-2">•</span>R$ {{ formatarParaReal(item.price * item.quantity) }}
+              {{ item.quantity }} {{ unitText(item.quantity) }} <span class="mx-2">•</span>R$
+              {{ formatarParaReal(item.price * item.quantity) }}
             </p>
-            <!--ajustar unidade e unidades-->
           </div>
 
           <!--linha-->
@@ -116,3 +121,8 @@
     }
   </main>
 </section>
+
+<!--Controle do modal-->
+@if (isAddItemModal) {
+<app-form-add-item (close)="closeAddItemModal()"></app-form-add-item>
+}

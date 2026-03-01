@@ -1,0 +1,150 @@
+<section class="fixed inset-0 z-50 bg-black/40 overflow-y-auto p-6">
+  <div class="min-h-full flex justify-center items-start">
+    <div
+      class="w-full max-w-lg my-10 bg-white border border-slate-200 shadow-[0_20px_60px_rgba(0,0,0,0.25)] rounded-2xl p-8"
+    >
+      <!-- Cabeçalho -->
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-semibold">Adicionar item</h1>
+
+        <button
+          class="w-10 h-10 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-600 flex items-center justify-center cursor-pointer border border-slate-200 shadow-sm"
+          (click)="closeModal()"
+          aria-label="Fechar"
+        >
+          <i class="fa-solid fa-x"></i>
+        </button>
+      </div>
+
+      <!-- Linha -->
+      <div class="mt-4 h-px w-full bg-slate-200"></div>
+
+      <!-- Formulário (TUDO aqui dentro) -->
+      <div class="mt-4 space-y-4">
+        <!-- Nome -->
+        <div>
+          <label class="block text-sm font-medium text-slate-700">
+            Nome do item <span class="text-red-600">*</span>
+          </label>
+          <input
+            type="text"
+            placeholder="Ex: Sofá Retrátil"
+            class="mt-2 w-full rounded-xl bg-white border border-slate-200 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+          />
+        </div>
+
+        <!-- Foto -->
+        <div>
+          <label class="block text-sm font-medium text-slate-700">Foto do item</label>
+
+          <div class="mt-2 rounded-2xl border border-dashed border-slate-200 p-6 bg-white">
+            <div class="flex gap-3">
+              <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 shadow-sm">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  class="mx-auto size-12 text-gray-300"
+                >
+                  <path
+                    d="M1.5 6a2.25 2.25 0 0 1 2.25-2.25h16.5A2.25 2.25 0 0 1 22.5 6v12a2.25 2.25 0 0 1-2.25 2.25H3.75A2.25 2.25 0 0 1 1.5 18V6ZM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0 0 21 18v-1.94l-2.69-2.689a1.5 1.5 0 0 0-2.12 0l-.88.879.97.97a.75.75 0 1 1-1.06 1.06l-5.16-5.159a1.5 1.5 0 0 0-2.12 0L3 16.061Zm10.125-7.81a1.125 1.125 0 1 1 2.25 0 1.125 1.125 0 0 1-2.25 0Z"
+                    clip-rule="evenodd"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+
+              <div class="flex-1">
+                <label
+                  for="file-upload"
+                  class="inline-block mt-1 cursor-pointer font-semibold text-slate-700 hover:text-slate-900"
+                >
+                  + Inserir foto
+                  <input id="file-upload" type="file" name="file-upload" class="sr-only" />
+                </label>
+                <p class="text-xs text-gray-400 mt-1">PNG, JPG ou JPEG (máx. 10MB)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preço + Quantidade -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-700">
+              Preço <span class="text-red-600">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Ex: R$ 354,00"
+              class="mt-2 w-full rounded-xl bg-white border border-slate-200 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+            />
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-700">
+              Quantidade <span class="text-red-600">*</span>
+            </label>
+            <input
+              type="text"
+              placeholder="Ex: 2"
+              class="mt-2 w-full rounded-xl bg-white border border-slate-200 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+            />
+          </div>
+        </div>
+
+        <!-- Prioridade -->
+        <div>
+          <label class="block text-sm font-medium text-slate-700">
+            Prioridade <span class="text-red-600">*</span>
+          </label>
+          <select
+            class="mt-2 w-full rounded-xl bg-white border border-slate-200 px-4 py-3 text-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+          >
+            <option value="Alta">Alta</option>
+            <option value="Baixa">Baixa</option>
+            <option value="Média">Média</option>
+          </select>
+        </div>
+
+        <!-- Link -->
+        <div>
+          <label class="block text-sm font-medium text-slate-700">Link do produto</label>
+          <input
+            type="text"
+            placeholder="Inserir link"
+            class="mt-2 w-full rounded-xl bg-white border border-slate-200 px-4 py-3 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30"
+          />
+        </div>
+
+        <!-- Checkbox -->
+        <div class="flex items-center gap-3 pt-1">
+          <input
+            type="checkbox"
+            class="size-4 rounded border-gray-300 checked:bg-emerald-600 checked:border-emerald-600"
+          />
+          <span class="text-sm font-medium text-gray-900">Marcar como comprado</span>
+        </div>
+      </div>
+
+      <!-- Linha -->
+      <div class="mt-6 h-px w-full bg-slate-200"></div>
+
+      <!-- Botões -->
+      <div class="flex items-center justify-between mt-5">
+        <button
+          class="rounded-xl border border-slate-200 bg-white px-6 py-3 text-slate-700 hover:bg-slate-50 transition cursor-pointer"
+          (click)="closeModal()"
+        >
+          Cancelar
+        </button>
+
+        <button
+          class="rounded-xl bg-emerald-600 px-8 py-3 text-white font-semibold hover:bg-emerald-700 transition shadow-sm cursor-pointer"
+        >
+          Cadastrar item
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

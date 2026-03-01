@@ -4,10 +4,12 @@ import { Component, OnInit } from '@angular/core'; //Chamando o OnInit
 import { IItemsDetails, IRoom } from './interfaces/room-guide.interface'; //Chamada interface back
 import { RoomGuideService } from './services/room-guide'; //Chamando o service
 
+//Components
+import { FormAddItem } from '../form-add-item/form-add-item';
 
 @Component({
   selector: 'app-room-guide',
-  imports: [],
+  imports: [FormAddItem],
   templateUrl: './room-guide.html',
   styleUrl: './room-guide.css'
 })
@@ -15,6 +17,7 @@ export class RoomGuideComponent implements OnInit {
 
 public itemsRoom: IRoom[] = [];
 public itemData: IItemsDetails[] = [];
+public isAddItemModal: boolean = false;
 
 constructor(private roomGuideService: RoomGuideService) {} //Precisamos chamar as ferramentas para funcionar antes de iniciar o component.
 
@@ -42,4 +45,17 @@ this.roomGuideService.getData().subscribe({ //Subscribe - Observa o Observable q
     maximumFractionDigits: 2
   });
 }
+
+public unitText(quantity: number): string {
+   return quantity === 1 ? 'unidade' : 'unidades'
+
+}
+
+public openAddItemModal(): void {
+  this.isAddItemModal = true;
+}
+public closeAddItemModal(): void {
+  this.isAddItemModal = false;
+}
+
 }
